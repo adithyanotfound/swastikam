@@ -62,6 +62,7 @@ export async function POST(request: NextRequest) {
         message: 'Deepgram TTS failed, using browser TTS fallback',
         text: text,
         useFallback: true,
+        //@ts-ignore
         error: deepgramError.message
       }, { status: 200 })
     }
